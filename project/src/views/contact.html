@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@100&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <link rel="stylesheet" media="screen" href="../css/contact.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+      (function() {
+        // https://dashboard.emailjs.com/admin/account
+        emailjs.init('Z04ZmRiZr1Ftn7RMt');
+      })();
+    </script>
+    <script type="text/javascript">
+      window.onload = function() {
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+          event.preventDefault();
+          // generate a five digit number for the contact_number variable
+          this.contact_number.value = Math.random() * 100000 | 0;
+          // these IDs from the previous steps
+          emailjs.sendForm('contact_service', 'contact_form', this)
+                  .then(function() {
+                    console.log('SUCCESS!');
+                  }, function(error) {
+                    console.log('FAILED...', error);
+                  });
+        });
+      }
+    </script>
+  <title>CONTACT</title>
+</head>
+<body>
+<div id="mySidenav" class="sidenav">
+  <a id="closeBtn" href="#" class="close">×</a>
+  <ul>
+    <li><a href="../index.html">Accueil</a></li>
+    <li><a href="about.html">A Propos</a></li>
+  </ul>
+</div>
+
+<a href="#" id="openBtn">
+  <span class="burger-icon">
+    <span></span>
+    <span></span>
+    <span></span>
+  </span>
+</a>
+<div class="form">
+<form id="contact-form">
+  <input type="hidden" name="contact_number">
+  <label><strong>Nom :</strong></label><br>
+  <input type="text" name="user_name"><br>
+  <label><strong>Email :</strong></label><br>
+  <input type="email" name="user_email"><br>
+  <label><strong>Message :</strong></label><br>
+  <textarea name="message"></textarea><br>
+  <input type="submit" value="ENVOYER">
+</form>
+</div>
+<script src="../js/about.js"></script>
+</body>
+</html>

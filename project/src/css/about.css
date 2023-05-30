@@ -1,0 +1,392 @@
+body {
+    width: 100%;
+    height: 100%;
+    background: #e2e8ea;
+    font-family: 'Roboto Mono', monospace, sans-serif;;
+}
+
+/* Sidenav menu */
+.sidenav {
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: -250px;
+    background-color: #e8088f;
+    padding-top: 60px;
+    transition: left 0.5s ease;
+}
+
+/* Sidenav menu links */
+.sidenav a {
+    padding: 8px 8px 8px 0px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #e8fa09;
+}
+
+.sidenav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Active class */
+.sidenav.active {
+    left: 0;
+}
+
+/* Close btn */
+.sidenav .close {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+}
+
+/* Icône burger */
+.burger-icon span {
+    display: block;
+    width: 35px;
+    height: 5px;
+    background-color: #e8088f;
+    margin: 6px -8px;
+}
+
+#openBtn {
+    position: fixed;
+}
+
+/*upload cv*/
+.cv {
+    text-align: right;
+    right:13px;
+    top: 15px;
+    position: fixed;
+}
+
+h1 {
+    color: #e8088f;
+    text-align: center;
+}
+
+a {
+    color: #e8088f;
+    text-align: center;
+    text-decoration: none;
+
+}
+
+
+/*introduction section*/
+/*presentation*/
+.text {
+
+    margin-left: 300px;
+    margin-right: 300px;
+    text-align: justify;
+}
+
+/*skills section*/
+.skill {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 300px;
+    margin-right: 300px;
+
+}
+/*ul*/
+#skill {
+    list-style: none;
+    font-family: 'Roboto Mono', monospace, sans-serif;
+    font-size: 12px;
+    width: 50%;
+    height: 100%;
+    position: relative;
+    padding: 20px 0 0;
+    margin: 0 40px 0 0;
+
+}
+
+#skill-2 {
+    list-style: none;
+    font-family: 'Roboto Mono', monospace, sans-serif;
+    font-size: 12px;
+    width: 50%;
+    height: 100%;
+    position: relative;
+    margin: 0 0 40px;
+    padding: 20px 0 0;
+}
+
+/*li included in the ul*/
+/*graduation*/
+#skill li,#skill-2 li {
+    margin-bottom: 40px;
+    background: #e9e5e2;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#e1ddd9), to(#e9e5e2));
+    background-image: -webkit-linear-gradient(top, #e1ddd9, #e9e5e2);
+    background-image: -moz-linear-gradient(top, #e1ddd9, #e9e5e2);
+    background-image: -ms-linear-gradient(top, #e1ddd9, #e9e5e2);
+    background-image: -o-linear-gradient(top, #e1ddd9, #e9e5e2);
+    background-image: linear-gradient(top, #e1ddd9, #e9e5e2);
+    height: 20px;
+    border-radius: 10px;
+
+}
+
+
+#skill li h3,
+#skill-2 li h3 {
+    position: relative;
+    top: -25px;
+}
+
+
+.bar,
+.bar-2{
+    height: 18px;
+    margin: 1px 2px;
+    position: absolute;
+    border-radius: 10px;
+    box-shadow: 0 1px 0px #fcfcfc inset, 0 1px 0 #bebbb9;
+}
+
+.html {
+    width: 80%;
+    background-color: #f8b0d9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f8b0d9), to(#e8088f));
+    background-image: -webkit-linear-gradient(top, #f8b0d9, #e8088f);
+    background-image: -moz-linear-gradient(top, #f8b0d9, #e8088f);
+    background-image: -ms-linear-gradient(top, #f8b0d9, #e8088f);
+    background-image: -o-linear-gradient(top, #f8b0d9, #e8088f);
+    background-image: linear-gradient(top, #f8b0d9, #e8088f);
+}
+
+.css {
+    width: 80%;
+    background-color: #f8b0d9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f8b0d9), to(#e8088f));
+    background-image: -webkit-linear-gradient(top, #f8b0d9, #e8088f);
+    background-image: -moz-linear-gradient(top, #f8b0d9, #e8088f);
+    background-image: -ms-linear-gradient(top, #f8b0d9, #e8088f);
+    background-image: -o-linear-gradient(top, #f8b0d9, #e8088f);
+    background-image: linear-gradient(top, #f8b0d9, #e8088f);
+}
+
+.javascript {
+    width: 65%;
+    background-color: #f8b0d9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f8b0d9), to(rgba(232, 8, 143, 100)));
+    background-image: -webkit-linear-gradient(top, #f8b0d9, #e8088f);
+    background-image: -moz-linear-gradient(top, #f8b0d9, #e8088f);
+    background-image: -ms-linear-gradient(top, #f8b0d9, #e8088f);
+    background-image: -o-linear-gradient(top, #f8b0d9, #e8088f);
+    background-image: linear-gradient(top, #f8b0d9, #e8088f);
+}
+
+.php {
+    width: 70%;
+    background-color: #f8b0d9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(248, 176, 217, 100)), to(#e8088f));
+    background-image: -webkit-linear-gradient(top, #f8b0d9, #e8088f);
+    background-image: -moz-linear-gradient(top, #f8b0d9, #e8088f);
+    background-image: -ms-linear-gradient(top, rgba(248, 176, 217, 100), #e8088f);
+    background-image: -o-linear-gradient(top, #f8b0d9, #e8088f);
+    background-image: linear-gradient(top, #f8b0d9, #e8088f)
+}
+
+.sql {
+    width: 75%;
+    background-color: #f8b0d9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f8b0d9), to(#e8088f));
+    background-image: -webkit-linear-gradient(top, #f8b0d9, #e8088f);
+    background-image: -moz-linear-gradient(top, #f8b0d9, #e8088f);
+    background-image: -ms-linear-gradient(top, #f8b0d9, #e8088f);
+    background-image: -o-linear-gradient(top, #f8b0d9, #e8088f);
+    background-image: linear-gradient(top, #f8b0d9, #e8088f);
+}
+
+.java {
+    width: 60%;
+    background-color: #f8b0d9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f8b0d9), to(#e8088f));
+    background-image: -webkit-linear-gradient(top, #f8b0d9, #e8088f);
+    background-image: -moz-linear-gradient(top, #f8b0d9, #e8088f);
+    background-image: -ms-linear-gradient(top, #f8b0d9, #e8088f);
+    background-image: -o-linear-gradient(top, #f8b0d9, #e8088f);
+    background-image: linear-gradient(top, #f8b0d9, #e8088f);
+}
+
+.codeigniter {
+    width: 50%;
+    background-color: #f8b0d9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f8b0d9), to(#e8088f));
+    background-image: -webkit-linear-gradient(top, #f8b0d9, #e8088f);
+    background-image: -moz-linear-gradient(top, #f8b0d9, #e8088f);
+    background-image: -ms-linear-gradient(top, #f8b0d9, #e8088f);
+    background-image: -o-linear-gradient(top, #f8b0d9, #e8088f);
+    background-image: linear-gradient(top, #f8b0d9, #e8088f);
+}
+
+.angular {
+    width: 60%;
+    background-color: #f8b0d9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f8b0d9), to(#e8088f));
+    background-image: -webkit-linear-gradient(top, #f8b0d9, #e8088f);
+    background-image: -moz-linear-gradient(top, #f8b0d9, #e8088f);
+    background-image: -ms-linear-gradient(top, #f8b0d9, #e8088f);
+    background-image: -o-linear-gradient(top, #f8b0d9, #e8088f);
+    background-image: linear-gradient(top, #f8b0d9, #e8088f);
+}
+
+.symfony {
+    width: 70%;
+    background-color: #f8b0d9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f8b0d9), to(#e8088f));
+    background-image: -webkit-linear-gradient(top, #f8b0d9, #e8088f);
+    background-image: -moz-linear-gradient(top, #f8b0d9, #e8088f);
+    background-image: -ms-linear-gradient(top, #f8b0d9, #e8088f);
+    background-image: -o-linear-gradient(top, #f8b0d9, #e8088f);
+    background-image: linear-gradient(top, #f8b0d9, #e8088f);
+}
+
+.vue {
+    width: 20%;
+    background-color: #f8b0d9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#f8b0d9), to(#e8088f));
+    background-image: -webkit-linear-gradient(top, #f8b0d9, #e8088f);
+    background-image: -moz-linear-gradient(top, #f8b0d9, #e8088f);
+    background-image: -ms-linear-gradient(top, #f8b0d9, #e8088f);
+    background-image: -o-linear-gradient(top, #f8b0d9, #e8088f);
+    background-image: linear-gradient(top, #f8b0d9, #e8088f);
+}
+
+
+/*screenshots*/
+/*section*/
+
+
+.img-1,.img-2,.img-3,.img-4 {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-bottom: 50px;
+
+}
+
+
+/* width images*/
+/*screenshots:  portfolio,interhop,ABCDaire,snapfaces,serie,ENI-Enchères,ENI-Sorties*/
+.ab,.interhop,.abc,.kj,.snapfaces,.series,.encheres,.sortie
+{
+    border: #e8088f 0.5px solid;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/*hoover*/
+
+.image-container-1,
+.image-container-3,
+.image-container-5,
+.image-container-7
+{
+    position: relative;
+    flex: 1;
+    margin-right: 20px;
+
+}
+.image-container-2,
+.image-container-4,
+.image-container-6,
+.image-container-8
+{
+    position: relative;
+    flex: 1;
+    margin-left: 20px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(232, 8, 143);
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.image-container-1:hover .overlay,
+.image-container-2:hover .overlay,
+.image-container-3:hover .overlay,
+.image-container-4:hover .overlay,
+.image-container-5:hover .overlay,
+.image-container-6:hover .overlay,
+.image-container-7:hover .overlay,
+.image-container-8:hover .overlay{
+    opacity: 1;
+}
+
+.overlay p {
+    color: #bac2c7;
+    font-size: 17px;
+    text-align: center;
+    margin: 0;
+    padding: 10px;
+}
+
+.github, .link {
+    color: white;
+    font-size: 17px;
+}
+
+.stage {
+    color: white;
+    font-size: 20px;
+}
+
+footer {
+    text-align: center;
+    padding-top: 50px;
+}
+
+@media all and (max-width: 600px) {
+    .text {
+        margin-left: 77px;
+        margin-right: 77px;
+        text-align: justify;
+    }
+
+    .skill {
+        display: flex;
+        margin-left: 100px;
+        margin-right: 100px;
+
+    }
+
+    #skill {
+        list-style: none;
+        font-family: 'Roboto Mono', monospace, sans-serif;
+        font-size: 12px;
+        width: 296px;
+        margin: 50px 20px;
+        position: relative;
+        line-height: 2em;
+        padding: 30px 0px;
+
+    }
+}
